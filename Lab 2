@@ -54,11 +54,11 @@
       ],
       "metadata": {
         "id": "McaWb21nzxU8",
-        "outputId": "9a8ab4d1-9df4-4264-d271-b4b28e251e23",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 430
-        }
+        },
+        "outputId": "9a8ab4d1-9df4-4264-d271-b4b28e251e23"
       },
       "execution_count": 2,
       "outputs": [
@@ -96,7 +96,7 @@
     {
       "cell_type": "code",
       "source": [
-        "x = 0.12345"
+        "x = 0.12345  #The variable x now holds the assigned value."
       ],
       "metadata": {
         "id": "bw6esAMU3I6X"
@@ -107,7 +107,7 @@
     {
       "cell_type": "code",
       "source": [
-        "x = x*3"
+        "x = x*3      #multiplication operation in Python."
       ],
       "metadata": {
         "id": "E9tlQTsQ3L7-"
@@ -118,7 +118,7 @@
     {
       "cell_type": "code",
       "source": [
-        "x % 1"
+        "x % 1          # represents the remainder when the value of the variable x is divided by 1."
       ],
       "metadata": {
         "colab": {
@@ -192,11 +192,11 @@
       ],
       "metadata": {
         "id": "OuAUddY54sxI",
-        "outputId": "7de7825c-7b4e-4a0a-975e-a11dda8165a5",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 430
-        }
+        },
+        "outputId": "7de7825c-7b4e-4a0a-975e-a11dda8165a5"
       },
       "execution_count": 7,
       "outputs": [
@@ -215,7 +215,7 @@
     {
       "cell_type": "code",
       "source": [
-        "def coin():\n",
+        "def coin(): #simulates a coin flip. It returns either 1 or -1 with an equal probability (50% chance each), mimicking the result of a fair coin toss where heads might be represented as 1 and tails as -1.\n",
         "    return 2*(np.random.random() > 0.5) - 1"
       ],
       "metadata": {
@@ -231,10 +231,10 @@
       ],
       "metadata": {
         "id": "upVKpqKamKIO",
-        "outputId": "c8616401-882f-4542-addb-c8ca0036a4d7",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "outputId": "c8616401-882f-4542-addb-c8ca0036a4d7"
       },
       "execution_count": 9,
       "outputs": [
@@ -253,15 +253,15 @@
     {
       "cell_type": "code",
       "source": [
-        "x = 0\n",
-        "x + coin()"
+        "x = 0 #x = 0: Initializes a variable x with the value 0.\n",
+        "x + coin() #Calls the coin() function, which simulates a coin flip and returns either 1 or -1."
       ],
       "metadata": {
         "id": "_Tpo3k_Rfvkm",
-        "outputId": "cec10232-fc5a-41be-8f49-b7607604cbd8",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "outputId": "cec10232-fc5a-41be-8f49-b7607604cbd8"
       },
       "execution_count": 10,
       "outputs": [
@@ -283,7 +283,7 @@
         "x = 0\n",
         "\n",
         "for i in range(3):\n",
-        "    x = x + coin()"
+        "    x = x + coin()    #involves a loop that iterates three times, and during each iteration, it adds the result of a coin flip to the variable x."
       ],
       "metadata": {
         "id": "bQ3khwo8nSC5"
@@ -298,10 +298,10 @@
       ],
       "metadata": {
         "id": "d7ABUR99nT6X",
-        "outputId": "7dc53842-f779-44a6-a9ee-0f6744d1004e",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "outputId": "7dc53842-f779-44a6-a9ee-0f6744d1004e"
       },
       "execution_count": 12,
       "outputs": [
@@ -338,10 +338,10 @@
       ],
       "metadata": {
         "id": "sdOlgTxFfvs3",
-        "outputId": "3113a32d-21c2-4336-9bae-bc0e0fa941ee",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "outputId": "3113a32d-21c2-4336-9bae-bc0e0fa941ee"
       },
       "execution_count": 14,
       "outputs": [
@@ -362,7 +362,7 @@
       "source": [
         "M = 10000\n",
         "N = 100\n",
-        "\n",
+        "                      #simulates a random walk by repeatedly flipping a simulated coin N times and repeating this process M times.\n",
         "X = np.zeros(M,)\n",
         "\n",
         "for j in range(M):\n",
@@ -383,15 +383,15 @@
     {
       "cell_type": "code",
       "source": [
-        "plt.hist(X);"
+        "plt.hist(X);     # create a histogram of the values stored in the array X."
       ],
       "metadata": {
         "id": "twqazgNcgOm1",
-        "outputId": "101569fb-18b7-4001-f180-ea9c38ba751b",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 430
-        }
+        },
+        "outputId": "101569fb-18b7-4001-f180-ea9c38ba751b"
       },
       "execution_count": 16,
       "outputs": [
@@ -437,15 +437,15 @@
         "    for j in range(1,P.shape[1]-1):\n",
         "\n",
         "        P[i,j] = P[i-1,j-1]+P[i-1,j]\n",
-        "\n",
+        "                              #initializes a 2D array P with zeros, sets the value at (0, 5) to 1, and then uses nested loops to populate the array according to Pascal's Triangle rules.\n",
         "print(P[:,5:])"
       ],
       "metadata": {
         "id": "ksVd5iqgfvu-",
-        "outputId": "8c09f154-ef5e-4c5e-b747-f66ee70bd2a7",
         "colab": {
           "base_uri": "https://localhost:8080/"
-        }
+        },
+        "outputId": "8c09f154-ef5e-4c5e-b747-f66ee70bd2a7"
       },
       "execution_count": 17,
       "outputs": [
@@ -495,11 +495,11 @@
       ],
       "metadata": {
         "id": "ICFhNGpBzw7o",
-        "outputId": "f1c81110-8917-4375-edf6-5986b08ffb05",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 430
-        }
+        },
+        "outputId": "f1c81110-8917-4375-edf6-5986b08ffb05"
       },
       "execution_count": 18,
       "outputs": [
@@ -520,7 +520,7 @@
       "source": [
         "x = np.linspace(-15,15,1000)\n",
         "\n",
-        "y = np.exp(-x**2)"
+        "y = np.exp(-x**2)         #wo NumPy arrays, x and y, using the linspace function and the exponential function (np.exp)."
       ],
       "metadata": {
         "id": "Q_3xJvJOI0EN"
@@ -531,15 +531,15 @@
     {
       "cell_type": "code",
       "source": [
-        "plt.plot(x,y)"
+        "plt.plot(x,y)       #create a 2D line plot."
       ],
       "metadata": {
         "id": "FCNvnmH5I3Vk",
-        "outputId": "2dba4bf1-9750-4fa6-f466-fa6670575f3b",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 447
-        }
+        },
+        "outputId": "2dba4bf1-9750-4fa6-f466-fa6670575f3b"
       },
       "execution_count": 20,
       "outputs": [
@@ -568,7 +568,7 @@
     {
       "cell_type": "code",
       "source": [
-        "y2 = np.sin(10*x)"
+        "y2 = np.sin(10*x)        #generates a new NumPy array y2 by applying the sine function to each element of the array x."
       ],
       "metadata": {
         "id": "WY18sHPrI3eg"
@@ -579,7 +579,7 @@
     {
       "cell_type": "code",
       "source": [
-        "plt.plot(x,y2)"
+        "plt.plot(x,y2)          #create a 2D line plot of the values in arrays x and y2."
       ],
       "metadata": {
         "colab": {
@@ -616,7 +616,7 @@
     {
       "cell_type": "code",
       "source": [
-        "plt.plot(x,y*y2)"
+        "plt.plot(x,y*y2) #create a 2D line plot of the product of the values in arrays y and y2."
       ],
       "metadata": {
         "colab": {
@@ -654,7 +654,7 @@
       "cell_type": "code",
       "source": [
         "y3 =  np.exp(- (x - 0) ** 2 )\n",
-        "plt.plot(x, y3, linewidth=2, color='r')"
+        "plt.plot(x, y3, linewidth=2, color='r')   #calculates another array y3 by applying the Gaussian function to each element of the array x."
       ],
       "metadata": {
         "colab": {
@@ -749,7 +749,7 @@
     {
       "cell_type": "code",
       "source": [
-        "x = np.array([1,2,3,4])"
+        "x = np.array([1,2,3,4])  #creates a NumPy array named x containing the specified elements: 1, 2, 3, and 4."
       ],
       "metadata": {
         "id": "mG_A0OrJ3rQ-"
@@ -760,7 +760,7 @@
     {
       "cell_type": "code",
       "source": [
-        "np.sum(x)"
+        "np.sum(x)   #calculates the sum of all elements in the NumPy array x."
       ],
       "metadata": {
         "colab": {
@@ -786,7 +786,7 @@
     {
       "cell_type": "code",
       "source": [
-        "x.shape[0]"
+        "x.shape[0]   #retrieve the size of the first dimension of a NumPy array x."
       ],
       "metadata": {
         "colab": {
@@ -812,7 +812,7 @@
     {
       "cell_type": "code",
       "source": [
-        "np.sum(x)/x.shape[0]"
+        "np.sum(x)/x.shape[0]    #calculates the average (mean) of the elements in a NumPy array x."
       ],
       "metadata": {
         "colab": {
@@ -839,7 +839,7 @@
       "cell_type": "code",
       "source": [
         "def mean(x):\n",
-        "    return np.sum(x)/x.shape[0]"
+        "    return np.sum(x)/x.shape[0]     #calculates the mean (average) of the elements in a NumPy array x."
       ],
       "metadata": {
         "id": "2sNU3WHzKL-K"
@@ -850,7 +850,7 @@
     {
       "cell_type": "code",
       "source": [
-        "mean(x)"
+        "mean(x)    #calculates the mean (average) of the elements in a NumPy array x."
       ],
       "metadata": {
         "colab": {
@@ -902,7 +902,7 @@
     {
       "cell_type": "code",
       "source": [
-        "x - mean(x)"
+        "x - mean(x) #calculates the deviation of each element in a NumPy array x."
       ],
       "metadata": {
         "colab": {
